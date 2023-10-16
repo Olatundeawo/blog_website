@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block html_head %}
+<link rel="stylesheet" type="text/css" href="static/css/admin/admin.css">
+{{ ckeditor.load() }}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3 post" >
+    <h2>Post</h2>
+    <form method='post'>
+      <div class="mb-3 mt-3">
+        <label for="headline">Headline:</label>
+        <input type="text" class="form-control" id="headline" name="headline">
+      </div>
+      
+      <div class="mb-3 mt-3">
+        <label for="comment">Text:</label>
+      </div>
+      <div>
+      {{ ckeditor.create() }}
+       
+    </div>      
+    <button type="submit" class="btn btn-primary submit">Submit</button>
+  </form>
+  </div>
+{% endblock %}
+

@@ -1,0 +1,19 @@
+body {
+    color: green;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    font-family: glory;
+}
+
+.post h1 {
+    text-transform: capitalize;
+    font-family: skranji;
+}
+
+.post p {
+    color: rgb(1, 10, 19);
+    line-height: 30px;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block html_head %}
+<link rel="stylesheet" type="text/css" href="static/css/about.css">
+{% endblock %}
+{% block content %}
+<body>
+<div class="about">
+    <div class="about_header">
+    <img src="{{url_for('static', filename='images/tunde.jpg')}}"
+     class="rounded-circle"
+      alt="Cinque Terre" width="200" 
+    height="200" />
+    </div>
+    <div class="about_page">
+    <h1> Hello fellow code enthusiasts! </h1>
+    <h3>Welcome to my corner of the internet dedicated to all things software development</h3>
+    <h5>Hey, I'm Babatunde </h5>
+    <p>
+        I'm a seasoned software engineer, I'm certified by Holberton school(ALX) 
+        aside that I'm also a
+        radiographer in the making. Nigeria is my place of origin
+    </p>
+    <p>My journey in software engineering began by enrolling in a software program at ALX,
+         where I had the opportunity to work on projects. "I have extensive expertise in languages
+          such as Python, JavaScript, and I'm well-versed in using popular frameworks like flask and Django. 
+         My proficiency in agile development methodologies has enabled me to collaborate effectively with cross-functional teams.
+        </p>
+        
+        <p> Looking ahead, I am committed to staying at the forefront of technological advancements. 
+         I'm excited about the prospect of mentoring the next generation of software engineers
+          and contributing to the tech community through open-source projects.
+          </p>
+    <p> 
+        Here, we're on a mission to transform complex code into elegant 
+        solutions. Whether you're here to sharpen your skills, gain insights, 
+        or simply share our passion for programming, I'm thrilled to have you along 
+        for the ride. So, let's embark on this 
+        exciting journey together and write lines of code that shape the digital future!
+    </p>
+</div>
+</div>
+</body>
+{% endblock %}

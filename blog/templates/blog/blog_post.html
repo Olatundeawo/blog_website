@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block html_head %}
+<link href='https://fonts.googleapis.com/css?family=Glory|skranji' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog/blog_post.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/main.css")}}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-3 post" >
+  <p> Reading time {{ reading_time }} minutes</p>
+    <h1> {{post.heading }} </h1>
+    <p> {{ post.post |safe }} </p>
+    {% if current_user.is_authenticated %}
+    <form method='post' action="{{ url_for('post.delete_post', title=post.heading )}}" onsubmit="return confirm('Do you want to proceed?')">
+    <input type='submit' class="btn btn-danger" value="Delete" id="delete">
+      <a href="{{ url_for('post.edit_post', post_id=post.id)}}" class="btn btn-primary">Edit</a>
+  </form>
+  
+  
+  {% endif %}
+  
+  </div>
+{% endblock %}

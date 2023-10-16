@@ -1,0 +1,114 @@
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: green;
+    border-radius: 15px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+.main{   
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 100%;
+}
+
+a:link {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+.main .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 5px solid green;
+}
+.main .heading h1{
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: green;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.main .heading span{
+    color: black;
+}
+
+.heading .link {
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.heading .link ul {
+    position: absolute;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    left: 10px;
+}
+
+.heading .link ul li {
+    padding-left: 70px;
+    color:rgb(19, 94, 206);
+}
+
+.heading .link ul i {
+    color: black;
+    
+}
+
+.content {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#footer {
+    position: absolute; 
+    height: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+}
+#footer ul {
+    display: flex;
+    list-style-type: none;
+}
+#footer li{
+    padding: 15px;
+    background-color: black;
+}
+#footer p {
+    font-family: sofia;
+    color: rgb(22, 21, 22);
+    text-shadow: 3px 3px 3px #ababab
+}
+
+
+
+
+
+@media screen and (width: 280px) and (height: 653px) {
+    /* Your CSS styles for this specific screen size go here */
+    
+    .heading .link ul i {
+        display: none;        
+    }
+  }  
+
+
+@media screen and (max-width: 768px) {
+    /* Your CSS styles for mobile devices go here */
+    .heading .link ul li {
+        padding-left: 20px;
+    }
+  }

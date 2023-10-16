@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block html_head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog/edit.css')}}">
+{{ ckeditor.load()}}
+{% endblock %}
+{% block content %}
+
+<div class="container mt-3 post" >
+    <h2>Post</h2>
+    <form method='post'>
+       {{ form.hidden_tag() }} 
+      <div class="form-group">
+       {{ form.heading.label(class="form-control-label") }}
+       {{ form.heading(class="form.control") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.post.label(class="form.control-label") }}
+        {{ form.post(class="form-control ckeditor") | safe }}
+      </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+  </div>
+{% endblock %}

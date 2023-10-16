@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block html_head %}
+<link href='https://fonts.googleapis.com/css?family=Alkalami|Arbutus Slab|Buenard|Belgrano' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/blog/blog.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/main.css")}}">
+{% endblock %}
+
+{% block content %}
+<div class="main_blog">
+<div id="blog">
+    <h1> Blog </h2>
+    <p> The only way to do great work is to love what you do. </p>
+</div>
+<div class="blog">
+    {% for heading in headings %}
+<div class="post">
+<h2> <a href ="{{ url_for('post.get_post',title=heading.heading) }}">{{ heading.heading }} </a></h1>
+
+    <div class = "author"> 
+        <p>Bababtunde </p>
+        <p>{{ heading.post_date.strftime("%A. %d %B, %Y") }}</p>
+    </div>
+</div>
+{% endfor %}
+</div>
+</div>
+{%endblock %}

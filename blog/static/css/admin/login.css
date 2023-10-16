@@ -1,0 +1,26 @@
+#login{
+    display: grid;
+    /* border: 2px solid black; */
+    border-radius: 15px;
+    margin-bottom: 50px;
+    padding: 10px;
+    margin: 10px;
+    background-color: hsl(228, 12%, 24%);
+    color: rgb(237, 241, 255);
+    box-shadow: 10px 10px 5px 12px rgb(250, 251, 252);
+}
+
+.btn {
+    margin-bottom: 50px;
+}
+
+form, h2, .show{
+    width: 70%;
+    margin-left: 70px;
+}
+
+
+
+
+
+

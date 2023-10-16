@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block html_head %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong?Sofia">
+<link rel='stylesheet' type='text/css' href="{{url_for('static', filename='css/contact/contact.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/main.css") }}">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="main_contact">
+    <div class="heading_contact">
+<h1>Contact me</h1>
+</div>
+<div class="para">
+<p> Have one or two words? or a business deal you can
+    make use of the form below and be rest assure
+    that i will get back to you if need be. </p>
+</div>
+<div class="message">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li class="danger">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+        </div>
+    <div class="form">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+        <p>{{ form.name.label }}<br>{{ form.name(placeholder='Your name') }}</p>
+        </div>
+
+        <div>
+        <p>{{ form.email.label }}<br>{{ form.email(placeholder='Your email') }}</p>
+        </div>
+
+        <div>
+        <p>{{ form.message.label }}<br>{{ form.message(placeholder='Type your message') }}</p>
+        </div>
+        
+        <div>
+        <p class="send">{{ form.submit() }}</p>
+        </div>
+
+    </form>
+</div>
+</div>
+
+{% endblock %}
